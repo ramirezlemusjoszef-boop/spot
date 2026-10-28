@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F5F6F7">
+<title>Spot Cleaning, Maintenance &amp; Welding</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Spot Cleaning, Maintenance &amp; Welding. Deep cleaning, equipment maintenance and welding for restaurant kitchens, hotels, offices and homes in Nassau. Open 7am to 9pm every day. WhatsApp 242-525-6861.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Barlow:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap">
+<style>
+/* Layout: a back-of-house trade, so the page borrows the kitchen's materials. Brushed-steel greys,
+   a weld-spark orange, condensed signage type, and a work-order ticket as the signature: the visitor
+   fills in the job and it goes to WhatsApp as a numbered work order. Single light theme on purpose. */
+:root{
+  --steel:#E6E9EC;      /* brushed stainless */
+  --steel-2:#D5DADF;
+  --plate:#F5F6F7;
+  --ink:#14171B;        /* graphite */
+  --ink-2:#3A4048;
+  --muted:#6B737D;
+  --line:rgba(20,23,27,.14);
+  --spark:#FF5A14;      /* weld spark */
+  --spark-ink:#C93D00;
+  --wa:#1FAF5A;
+  --head:'Barlow Condensed','Arial Narrow',Helvetica,Arial,sans-serif;
+  --body:'Barlow','Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --pad:18px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--plate);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 var(--pad)}
+.brushed{background-color:var(--steel);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 1px,rgba(0,0,0,0) 1px 3px),linear-gradient(180deg,#EEF0F2,#DDE1E5)}
+
+.ribbon{background:var(--ink);color:#E6E9EC;text-align:center;padding:8px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.ribbon b{color:#FF9A6A}
+header.top{position:sticky;top:0;z-index:40;background:rgba(245,246,247,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.mark{width:42px;height:42px;border-radius:10px;background:var(--ink);display:grid;place-items:center;flex:none;position:relative;overflow:hidden}
+.mark b{font-family:var(--head);font-weight:800;color:#fff;font-size:22px;letter-spacing:.02em}
+.mark i{position:absolute;right:6px;top:6px;width:7px;height:7px;border-radius:50%;background:var(--spark);box-shadow:0 0 8px var(--spark)}
+.brand strong{display:block;font-family:var(--head);font-weight:800;font-size:22px;line-height:1;letter-spacing:.01em;text-transform:uppercase}
+.brand small{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-top:3px;white-space:nowrap}
+.hwa{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:15px;flex:none}
+.hwa svg{width:19px;height:19px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:58px;padding:0 24px;border-radius:12px;font-family:var(--head);font-weight:700;font-size:21px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:transform .12s,filter .15s}
+.btn svg{width:21px;height:21px;flex:none}
+.btn:active{transform:translateY(1px)}
+.btn-spark{background:var(--spark);color:#fff;box-shadow:0 12px 26px -12px rgba(255,90,20,.8)}
+.btn-spark:hover{filter:brightness(1.05)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-line{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn-wa{background:var(--wa);color:#fff}
+
+/* hero */
+.hero{padding:30px 0 0;overflow:hidden}
+.tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line);background:#fff;border-radius:6px;padding:6px 10px}
+.tag i{width:8px;height:8px;border-radius:50%;background:#18B26B}
+.hero h1{font-family:var(--head);font-weight:800;text-transform:uppercase;font-size:clamp(54px,16vw,112px);line-height:.86;letter-spacing:-.005em;margin:16px 0 0}
+.hero h1 span{display:block}
+.hero h1 em{font-style:normal;color:var(--spark)}
+.lede{font-size:19px;color:var(--ink-2);margin:16px 0 0;max-width:36ch}
+.lede b{color:var(--ink)}
+.acts{display:grid;gap:10px;margin-top:24px}
+.photo{position:relative;margin:30px 0 0;border-radius:16px 16px 0 0;overflow:hidden;background:#cfd4d9}
+.photo img{width:100%;aspect-ratio:4/4.4;object-fit:cover;object-position:50% 40%}
+.photo figcaption{position:absolute;left:12px;bottom:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.cap{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:rgba(20,23,27,.86);color:#fff;padding:8px 10px;border-radius:6px}
+.cap b{color:#FF9A6A}
+.open{font-family:var(--head);font-weight:800;text-transform:uppercase;background:var(--spark);color:#fff;padding:8px 12px;border-radius:6px;font-size:18px;line-height:1;text-align:center}
+.open small{display:block;font-family:var(--mono);font-weight:500;font-size:9.5px;letter-spacing:.1em;margin-top:4px;opacity:.9}
+
+/* trades bar */
+.trades{background:var(--ink);color:#fff}
+.trades .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.trade{padding:18px 6px;text-align:center;border-right:1px solid rgba(255,255,255,.12)}
+.trade:last-child{border-right:0}
+.trade svg{width:26px;height:26px;margin:0 auto;color:var(--spark)}
+.trade b{display:block;font-family:var(--head);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.03em;margin-top:6px}
+.trade span{display:block;font-family:var(--mono);font-size:10px;color:#9AA2AB;letter-spacing:.08em;text-transform:uppercase}
+
+section{padding:64px 0}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--spark-ink);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:18px;height:3px;background:var(--spark)}
+h2{font-family:var(--head);font-weight:800;text-transform:uppercase;font-size:clamp(42px,11vw,76px);line-height:.9;margin:10px 0 0}
+.sub{color:var(--ink-2);font-size:18px;margin:14px 0 0;max-width:46ch}
+
+/* pillars */
+.pillars{display:grid;gap:12px;margin-top:28px}
+.pillar{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px;position:relative;overflow:hidden}
+.pillar .num{position:absolute;right:16px;top:10px;font-family:var(--head);font-weight:800;font-size:64px;line-height:1;color:var(--steel-2)}
+.pillar h3{position:relative;font-family:var(--head);font-weight:800;text-transform:uppercase;font-size:32px;line-height:1;margin:0}
+.pillar p{position:relative;margin:8px 0 0;color:var(--ink-2);font-size:16px}
+.pillar ul{position:relative;list-style:none;margin:14px 0 0;padding:0;display:grid;gap:6px}
+.pillar li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+.pillar li::before{content:"";flex:none;width:7px;height:7px;margin-top:8px;background:var(--spark);transform:rotate(45deg)}
+
+/* work order */
+.wo{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 24px 50px -34px rgba(20,23,27,.5)}
+.wo-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:var(--ink);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.wo-head b{color:#FF9A6A}
+.row{padding:18px;border-bottom:1px dashed var(--line)}
+.row h3{margin:0 0 10px;font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{min-height:44px;padding:8px 14px;border-radius:8px;border:1.5px solid var(--line);background:var(--plate);cursor:pointer;font-weight:600;font-size:15.5px;line-height:1.2;text-align:left;transition:border-color .12s,background .12s}
+.chips button:hover{border-color:var(--ink)}
+.chips button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.chips.multi button[aria-pressed="true"]{background:var(--spark);border-color:var(--spark)}
+.hint{font-size:13px;color:var(--muted);margin:8px 0 0}
+.field input{width:100%;height:50px;border-radius:8px;border:1.5px solid var(--line);background:var(--plate);padding:0 14px;font:inherit;font-size:16px;color:var(--ink)}
+.field input:focus{outline:none;border-color:var(--spark);box-shadow:0 0 0 3px rgba(255,90,20,.15)}
+.ticket{padding:18px;background:var(--steel)}
+.ticket .tt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.slip{margin-top:10px;background:#FFFDF6;border:1px solid #E8E1CC;border-radius:6px;padding:14px;font-family:var(--mono);font-size:13px;line-height:1.6;white-space:pre-line;color:#2B2A26;position:relative}
+.slip::before{content:"";position:absolute;left:0;right:0;top:-6px;height:6px;background:radial-gradient(circle at 6px -2px,transparent 6px,#FFFDF6 6.5px) -6px 0/12px 6px repeat-x}
+.ticket .btn{width:100%;margin-top:14px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+.gal figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:#cfd4d9}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.gal .wide{grid-column:1/-1}
+.gal .wide img{aspect-ratio:16/8}
+.gal figcaption{position:absolute;left:10px;bottom:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;background:rgba(20,23,27,.85);color:#fff;padding:6px 8px;border-radius:5px}
+
+/* why */
+.why{background:var(--ink);color:#fff}
+.why h2{color:#fff}
+.why .kicker{color:#FF9A6A}
+.why .sub{color:#B7BEC6}
+.whys{display:grid;gap:10px;margin-top:28px}
+.w{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:18px}
+.w b{display:block;font-family:var(--head);font-weight:800;text-transform:uppercase;font-size:26px;line-height:1;color:var(--spark)}
+.w p{margin:6px 0 0;color:#C9CED4;font-size:15.5px}
+
+.final{padding:68px 0 74px}
+.final h2{font-size:clamp(50px,14vw,100px)}
+.final .acts{max-width:480px}
+
+footer{border-top:1px solid var(--line);color:var(--muted);padding:28px 0 110px;font-size:14.5px}
+footer b{color:var(--ink)}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.3fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(245,246,247,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+.sticky.on{transform:none}
+.sticky .btn{height:52px;font-size:19px;padding:0 10px}
+
+.rise{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s cubic-bezier(.2,.7,.3,1)}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rise{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media (max-width:420px){.hwa span{display:none}.hwa{width:46px;height:46px;padding:0;justify-content:center}.hwa svg{width:22px;height:22px}}
+@media (min-width:720px){
+  .acts{grid-template-columns:auto auto;justify-content:start}
+  .pillars{grid-template-columns:repeat(3,1fr)}
+  .whys{grid-template-columns:repeat(3,1fr)}
+  .gal .wide img{aspect-ratio:16/7}
+}
+@media (min-width:980px){
+  :root{--pad:40px}
+  .hero{padding:56px 0 0}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end}
+  .hero .copy{padding-bottom:64px}
+  .photo{margin:0}
+  .photo img{aspect-ratio:4/4.6}
+  section{padding:96px 0}
+  .wo-grid{display:grid;grid-template-columns:1.2fr .8fr}
+  .wo-grid .left{border-right:1px dashed var(--line)}
+  .ticket{display:flex;flex-direction:column;justify-content:center;padding:26px}
+  .row{padding:22px 26px}
+  .sticky{display:none}
+  footer{padding-bottom:36px}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Preview made for <b>Spot Cleaning, Maintenance &amp; Welding</b> · Nassau</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Spot home">
+      <span class="mark"><b>S</b><i></i></span>
+      <span><strong>Spot</strong><small>Cleaning · Maintenance · Welding</small></span>
+    </a>
+    <a class="hwa" aria-label="WhatsApp Spot" href="https://wa.me/12425256861?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>
+      <span>Get a quote</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero brushed" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="copy">
+      <span class="tag"><i></i><span id="opennow">Open today · 7am to 9pm</span></span>
+      <h1><span>Clean it.</span><span>Fix it.</span><span><em>Weld it.</em></span></h1>
+      <p class="lede">Deep cleaning, maintenance and welding for <b>restaurant kitchens, hotels, offices and homes</b> in Nassau. One crew, three trades, open every day till 9pm.</p>
+      <div class="acts">
+        <a class="btn btn-spark" href="#quote">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>
+          Start a work order
+        </a>
+        <a class="btn btn-line" href="tel:+12425256861">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          242-525-6861
+        </a>
+      </div>
+    </div>
+    <figure class="photo">
+      <img src="img/hero.jpg" alt="Spot technician in protective suit refinishing a walk-in cooler wall in a commercial kitchen" fetchpriority="high">
+      <figcaption>
+        <span class="cap"><b>On the job</b><br>Walk-in cooler wall, prepped for refinish</span>
+        <span class="open">7–9<small>Every day</small></span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="trades">
+  <div class="wrap">
+    <div class="trade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 3.8L17 8.4l-3.4 1.6L12 14l-1.6-4L7 8.4l3.4-1.6z"/><path d="M5 16l.8 1.8L8 19l-2.2.9L5 22l-.8-2.1L2 19l2.2-1.2z"/><path d="M19 14l.6 1.4L21 16l-1.4.6L19 18l-.6-1.4L17 16l1.4-.6z"/></svg><b>Clean</b><span>Deep cleans</span></div>
+    <div class="trade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg><b>Fix</b><span>Maintenance</span></div>
+    <div class="trade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l7-7"/><path d="M14 4l6 6-5 1-2 2-2-2 2-2z"/><path d="M17 15l1 2M19 13l2 1M15 18l0 2"/></svg><b>Weld</b><span>Steel &amp; metal</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="kicker rise">What we do</div>
+    <h2 class="rise">Three trades.<br>One call.</h2>
+    <p class="sub rise">Restaurants and hotels don't have time to chase three different contractors. Spot handles the cleaning, the repairs and the metalwork, and works around your service hours.</p>
+    <div class="pillars">
+      <article class="pillar rise"><span class="num">01</span><h3>Cleaning</h3><p>Back-of-house deep cleans that pass inspection.</p><ul><li>Commercial kitchen deep cleans</li><li>Stainless steel restored and polished</li><li>Floors, walls and walk-in coolers</li><li>Homes and offices</li></ul></article>
+      <article class="pillar rise"><span class="num">02</span><h3>Maintenance</h3><p>Keep equipment and buildings running, not waiting on a part.</p><ul><li>Kitchen equipment upkeep</li><li>Walk-in cooler panels and doors</li><li>Wall, door and fixture repairs</li><li>Prep and refinishing</li></ul></article>
+      <article class="pillar rise"><span class="num">03</span><h3>Welding</h3><p>Steel and metalwork built or repaired on site.</p><ul><li>Stainless fabrication and trim</li><li>Equipment and frame repairs</li><li>Gates, railings and grills</li><li>Custom metal pieces</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="brushed">
+  <div class="wrap">
+    <div class="kicker rise">Get a quote</div>
+    <h2 class="rise">Fill in the<br>work order.</h2>
+    <p class="sub rise">Three taps and it lands on our WhatsApp as a work order. Add photos in the chat and we'll quote fast.</p>
+    <div class="wo rise">
+      <div class="wo-head"><span>Work order <b id="wo-no">#0001</b></span><span id="wo-date"></span></div>
+      <div class="wo-grid">
+        <div class="left">
+          <div class="row">
+            <h3>Where's the job?</h3>
+            <div class="chips" id="place" role="group" aria-label="Type of place">
+              <button type="button" aria-pressed="true">Restaurant kitchen</button>
+              <button type="button" aria-pressed="false">Hotel</button>
+              <button type="button" aria-pressed="false">Office / shop</button>
+              <button type="button" aria-pressed="false">Home</button>
+            </div>
+          </div>
+          <div class="row">
+            <h3>What needs doing? <span style="text-transform:none;letter-spacing:0">(pick all that apply)</span></h3>
+            <div class="chips multi" id="jobs" role="group" aria-label="Jobs">
+              <button type="button" aria-pressed="true">Deep clean</button>
+              <button type="button" aria-pressed="false">Stainless restore</button>
+              <button type="button" aria-pressed="false">Equipment repair</button>
+              <button type="button" aria-pressed="false">Walk-in cooler</button>
+              <button type="button" aria-pressed="false">Welding / fabrication</button>
+              <button type="button" aria-pressed="false">Gates &amp; railings</button>
+              <button type="button" aria-pressed="false">General maintenance</button>
+            </div>
+          </div>
+          <div class="row">
+            <h3>When?</h3>
+            <div class="chips" id="when" role="group" aria-label="When">
+              <button type="button" aria-pressed="false">Today</button>
+              <button type="button" aria-pressed="true">This week</button>
+              <button type="button" aria-pressed="false">After hours</button>
+              <button type="button" aria-pressed="false">Planning ahead</button>
+            </div>
+          </div>
+          <div class="row" style="border-bottom:0">
+            <h3>Business or area</h3>
+            <label class="field"><input id="where" type="text" placeholder="e.g. restaurant on Bay St" autocomplete="off" aria-label="Business or area"></label>
+          </div>
+        </div>
+        <div class="ticket">
+          <div class="tt">Your work order</div>
+          <div class="slip" id="slip"></div>
+          <a class="btn btn-wa" id="send" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            Send on WhatsApp
+          </a>
+          <p class="hint">Prefer to talk? Call <a href="tel:+12425256861">242-525-6861</a>, 7am to 9pm.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker rise">Our work</div>
+    <h2 class="rise">Back of house,<br>front of house.</h2>
+    <div class="gal">
+      <figure class="wide rise"><img src="img/kitchen.jpg" alt="Commercial kitchen line of fryers and range, cleaned and serviced"><figcaption>Kitchen line · fryers &amp; range</figcaption></figure>
+      <figure class="rise"><img src="img/lobby.jpg" alt="Large stainless steel rod feature hanging in a hotel lobby"><figcaption>Hotel lobby · stainless feature</figcaption></figure>
+      <figure class="rise"><img src="img/steel.jpg" alt="Stainless steel wall cladding and floor during a deep clean"><figcaption>Stainless &amp; floor · deep clean</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="kicker rise">Why Spot</div>
+    <h2 class="rise">Built for places<br>that can't close.</h2>
+    <div class="whys">
+      <div class="w rise"><b>7am – 9pm</b><p>Open every day, including weekends. Book work before service or after close.</p></div>
+      <div class="w rise"><b>One crew</b><p>Cleaning, repairs and welding from the same team. One call, one bill.</p></div>
+      <div class="w rise"><b>Kitchen-ready</b><p>We know commercial kitchens: stainless, coolers, equipment and inspection standards.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="rise">Got a job<br><span style="color:var(--spark)">that can't wait?</span></h2>
+    <p class="sub rise">Send a photo on WhatsApp and get a quote today.</p>
+    <div class="acts rise">
+      <a class="btn btn-wa" href="https://wa.me/12425256861?text=Hi%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        WhatsApp us</a>
+      <a class="btn btn-ink" href="tel:+12425256861">Call 242-525-6861</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><b>Spot Cleaning, Maintenance &amp; Welding</b><br>19 Lancaster Rd, Nassau, The Bahamas · Open every day 7am–9pm · 242-525-6861</div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <a class="btn btn-ink" href="tel:+12425256861">Call</a>
+  <a class="btn btn-spark" href="#quote">Get a quote</a>
+</div>
+
+<script>
+(function(){
+  var PHONE='12425256861',$=function(i){return document.getElementById(i)};
+  var st={place:'Restaurant kitchen',jobs:['Deep clean'],when:'This week'};
+  var no=('000'+(Math.floor(Math.random()*900)+100)).slice(-4);
+  $('wo-no').textContent='#'+no;
+  try{$('wo-date').textContent=new Intl.DateTimeFormat('en-US',{timeZone:'America/Nassau',month:'short',day:'numeric'}).format(new Date())}catch(e){}
+  function single(id,key){
+    $(id).addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+      this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      st[key]=b.textContent;render()});
+  }
+  single('place','place');single('when','when');
+  $('jobs').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+    var on=b.getAttribute('aria-pressed')!=='true';
+    if(!on&&this.querySelectorAll('[aria-pressed="true"]').length===1)return;
+    b.setAttribute('aria-pressed',on?'true':'false');
+    st.jobs=[].map.call(this.querySelectorAll('[aria-pressed="true"]'),function(x){return x.textContent});render()});
+  $('where').addEventListener('input',render);
+  function render(){
+    var w=$('where').value.trim();
+    var msg='WORK ORDER #'+no+'\nPlace: '+st.place+(w?' ('+w+')':'')+'\nJob: '+st.jobs.join(', ')+'\nWhen: '+st.when+'\n\nHi Spot, can you give me a quote?';
+    $('slip').textContent=msg;
+    $('send').href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(msg);
+  }
+  render();
+  try{
+    var h=+new Intl.DateTimeFormat('en-US',{timeZone:'America/Nassau',hour:'numeric',hour12:false}).format(new Date());
+    $('opennow').textContent=(h>=7&&h<21)?'Open now · till 9pm':'Closed now · opens 7am';
+  }catch(e){}
+  var sticky=$('sticky'),hero=document.querySelector('.hero');
+  function onS(){sticky.classList.toggle('on',hero.getBoundingClientRect().bottom<0)}
+  addEventListener('scroll',onS,{passive:true});onS();
+  var els=document.querySelectorAll('.rise');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
